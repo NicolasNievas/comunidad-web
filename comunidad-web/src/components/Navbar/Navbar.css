@@ -1,0 +1,48 @@
+/* Navbar.css */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #282c34; /* Color de fondo del Navbar */
+    min-height: 15vh; /* Ajusta la altura del Navbar según tus preferencias */
+    padding: 10px 20px; /* Ajusta el espaciado según sea necesario */
+  }
+  
+  .navbar-left {
+    font-family: 'ModernSans', sans-serif;
+    font-weight: 700;
+    color: white; /* Color del texto */
+    margin: 0;
+  }
+  
+  .navbar-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+    padding-right: 100px;
+    gap: 25px;
+  }
+  
+  .navbar-ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-li {
+    text-align: center;
+  }
+  
+  .navbar-li-text {
+    color: white; /* Color del texto */
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .navbar-li-text:hover {
+    color: rgba(255, 255, 255, 0.7); /* Cambia el color al pasar el cursor */
+  }
+  
