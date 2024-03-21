@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className="global-header-container">
       <div className='navbar-container'>
-        <h1 className='navbar-left'>NavBar</h1>
+        <h1 className='navbar-left'>Clothing</h1>
 
         <nav className='navbar-right'>
           <ul className='navbar-ul'>

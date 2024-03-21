@@ -1,0 +1,77 @@
+{
+    "remeras": [
+      {
+        "id": 1,
+        "nombre": "Remera Essential Oversize",
+        "imagen": "https://d22fxaf9t8d39k.cloudfront.net/e7cf823544fa4734131f6fa37b9c19c7eb99a22aeca524ce5f49e5d6698338e67239.jpeg",
+        "precio": 20.99,
+        "descripcion": "Una bonita remera overzie Essential baige"
+      },
+      {
+        "id": 2,
+        "nombre": "Remera Overze Moon",
+        "imagen": "https://d22fxaf9t8d39k.cloudfront.net/e16839631a905a327103c7e6f353a281b27910353c07f533651a553c4018230d7239.jpg",
+        "precio": 18.50,
+        "descripcion": "Una elegante remera blanca con estampado de luna"
+      },
+      {
+        "id": 3,
+        "nombre": "Remera Essential Oversize",
+        "imagen": "https://d22fxaf9t8d39k.cloudfront.net/dc2710c762623b9fa12436931522b21590cfb0e4ac0a17f2b569c1cce7cba24e7239.jpg",
+        "precio": 21.99,
+        "descripcion": "Una bonita remera overzie Essential negra"
+      }
+    ],
+
+    "buzos": [
+      {
+        "id": 1,
+        "nombre": "Buzo Gris",
+        "imagen": "https://example.com/buzos/buzo-gris.jpg",
+        "precio": 35.99,
+        "descripcion": "Un cómodo buzo gris"
+      },
+      {
+        "id": 2,
+        "nombre": "Buzo Negro",
+        "imagen": "https://example.com/buzos/buzo-negro.jpg",
+        "precio": 40.00,
+        "descripcion": "Un moderno buzo negro"
+      }
+    ],
+
+    "pantalones": [
+      {
+        "id": 1,
+        "nombre": "Pantalón Azul",
+        "imagen": "https://example.com/pantalones/pantalon-azul.jpg",
+        "precio": 45.50,
+        "descripcion": "Un pantalón azul de moda"
+      },
+      {
+        "id": 2,
+        "nombre": "Pantalón Negro",
+        "imagen": "https://example.com/pantalones/pantalon-negro.jpg",
+        "precio": 50.00,
+        "descripcion": "Un clásico pantalón negro"
+      }
+    ],
+
+    "accesorios": [
+      {
+        "id": 1,
+        "nombre": "Collar de Plata",
+        "imagen": "https://example.com/accesorios/collar-plata.jpg",
+        "precio": 15.99,
+        "descripcion": "Un elegante collar de plata"
+      },
+      {
+        "id": 2,
+        "nombre": "Pulsera de Cuero",
+        "imagen": "https://example.com/accesorios/pulsera-cuero.jpg",
+        "precio": 12.00,
+        "descripcion": "Una moderna pulsera de cuero"
+      }
+    ]
+  }
+  

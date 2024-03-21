@@ -1,0 +1,15 @@
+.remeras-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Para espaciar uniformemente las remeras */
+  }
+  
+  .remera-item {
+    width: 300px; /* Ancho de cada remera */
+    margin-bottom: 20px; /* Espacio entre cada remera */
+  }
+  
+  .remera-item img {
+    width: 100%; /* Para asegurarse de que la imagen se ajuste al ancho del contenedor */
+  }
+  
