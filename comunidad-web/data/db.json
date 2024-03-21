@@ -64,15 +64,36 @@
     "pantalones": [
       {
         "id": 1,
-        "nombre": "Pantalón Azul",
-        "imagen": "https://example.com/pantalones/pantalon-azul.jpg",
+        "nombre": "Jogger MOM cargo",
+        "imagen": "https://d22fxaf9t8d39k.cloudfront.net/bf9127ac6b95b5983843909b7458d7b07a17ecf71f96feb3cbcc51a5fb3efd8a7239.jpeg",
         "precio": 45.50,
         "descripcion": "Un pantalón azul de moda"
       },
       {
         "id": 2,
-        "nombre": "Pantalón Negro",
-        "imagen": "https://example.com/pantalones/pantalon-negro.jpg",
+        "nombre": "Jogger MOM negro cargo",
+        "imagen": "https://d22fxaf9t8d39k.cloudfront.net/486180c3c7ca2d0b0ec44fc30231eb43f62e2c77695b429a7c334807279b925e7239.jpg",
+        "precio": 50.00,
+        "descripcion": "Un clásico pantalón negro"
+      },
+      {
+        "id": 3,
+        "nombre": "Jogger MOM Nevado",
+        "imagen": "https://d22fxaf9t8d39k.cloudfront.net/f8a835a1118d094d5cdf32667752e6c7ece7f12128cf3c9a045a4b9fcc5d6ca87239.jpg",
+        "precio": 50.00,
+        "descripcion": "Un clásico pantalón negro"
+      },
+      {
+        "id": 4,
+        "nombre": "Short Palm Ángel oversize",
+        "imagen": "https://d22fxaf9t8d39k.cloudfront.net/2111d03e3125ee5217df2752c4c869aeecf0752420399c1709cfbecfe6a815f97239.jpg",
+        "precio": 50.00,
+        "descripcion": "Un clásico pantalón negro"
+      },
+      {
+        "id": 5,
+        "nombre": "Bermuda MOM cargo nevada",
+        "imagen": "https://d22fxaf9t8d39k.cloudfront.net/a3d0076470003eb1fd8b6106afc96fd41468c2ca97b3fc84ad0aee66c7d4071b7239.jpg",
         "precio": 50.00,
         "descripcion": "Un clásico pantalón negro"
       }
