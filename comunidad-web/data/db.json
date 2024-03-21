@@ -20,6 +20,27 @@
         "imagen": "https://d22fxaf9t8d39k.cloudfront.net/dc2710c762623b9fa12436931522b21590cfb0e4ac0a17f2b569c1cce7cba24e7239.jpg",
         "precio": 21.99,
         "descripcion": "Una bonita remera overzie Essential negra"
+      },
+      {
+        "id": 4,
+        "nombre": "Remera Oversize Negra",
+        "imagen": "https://d22fxaf9t8d39k.cloudfront.net/db63c22ea5375d1a01fa6f8f3448ca4df110bcbb67c8330a84cedb6d4a99aedc7239.jpeg",
+        "precio": 21.99,
+        "descripcion": "Una bonita remera overzie negra lisa"
+      },
+      {
+        "id": 5,
+        "nombre": "Remeras oversize Happy",
+        "imagen": "https://d22fxaf9t8d39k.cloudfront.net/2c4a1453fa1f0375c6c3579379bc41304433be39dfcf0b4bc53514afee7618137239.jpg",
+        "precio": 21.99,
+        "descripcion": "Una bonita remera overzie negra lisa"
+      },
+      {
+        "id": 6,
+        "nombre": "Remera over Cruel Love",
+        "imagen": "https://d22fxaf9t8d39k.cloudfront.net/e4b02a1c1ec30bbb7523db67994a240028908011db0f95ed69c4318f8926d56e7239.jpg",
+        "precio": 21.99,
+        "descripcion": "Una bonita remera overzie negra lisa"
       }
     ],
 
