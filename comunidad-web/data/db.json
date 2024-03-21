@@ -47,17 +47,17 @@
     "buzos": [
       {
         "id": 1,
-        "nombre": "Buzo Gris",
-        "imagen": "https://example.com/buzos/buzo-gris.jpg",
+        "nombre": "Parka negra",
+        "imagen": "https://d22fxaf9t8d39k.cloudfront.net/c76e3936344ceed4587e955f7c449e395dec2c3b78cb7955c8f16224684381717239.jpg",
         "precio": 35.99,
-        "descripcion": "Un cómodo buzo gris"
+        "descripcion": "Una cómoda y abrigada parka negra"
       },
       {
         "id": 2,
-        "nombre": "Buzo Negro",
-        "imagen": "https://example.com/buzos/buzo-negro.jpg",
+        "nombre": "Buzo Oversize verde liso",
+        "imagen": "https://d22fxaf9t8d39k.cloudfront.net/71435a0671add66f90341b28644a5f2916f9d91186eeb7ae7a6717e84cc508717239.jpg",
         "precio": 40.00,
-        "descripcion": "Un moderno buzo negro"
+        "descripcion": "Un moderno buzo over verde liso"
       }
     ],
 
