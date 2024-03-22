@@ -1,9 +1,37 @@
+import React, { useState, useEffect } from 'react';
+import { GetAccesorios } from '../../../Services/RestServices';
+import './Accesorios.css';
 
-const Accesorios = () => {
+
+function Accesorios(){
+    const [accesorios, setAccesorios] = useState([]);
+
+    useEffect(() => {
+        const fetchAccesorios = async () => {
+            try {
+                const accesoriosData = await GetAccesorios();
+                setAccesorios(accesoriosData);
+            } catch (error) {
+                console.error('Error fetching accesorios:', error);
+            }
+        };
+
+        fetchAccesorios();
+    }, []);
+
     return (
-        <div className='global-container'>
-        <h1>Accesorios</h1>
-        <p>Welcome to the Accesorios page!</p>
+        <div>
+            <h2>Accesorios</h2>
+            <div className="accesorios-container">
+                {accesorios.map(accesorio => (
+                    <div key={accesorio.id} className="accesorio-item">
+                        <img src={accesorio.imagen} alt={accesorio.nombre} />
+                        <h3>{accesorio.nombre}</h3>
+                        <p>Precio: ${accesorio.precio}</p>
+                        <p>{accesorio.descripcion}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }

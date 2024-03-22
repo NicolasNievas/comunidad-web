@@ -102,17 +102,24 @@
     "accesorios": [
       {
         "id": 1,
-        "nombre": "Collar de Plata",
-        "imagen": "https://example.com/accesorios/collar-plata.jpg",
-        "precio": 15.99,
-        "descripcion": "Un elegante collar de plata"
+        "nombre": "Smart Watch Relojes Inteligente",
+        "imagen": "https://acdn.mitiendanube.com/stores/001/131/056/products/m4211-6ae73fa73c1da2388816852126149047-640-0.webp",
+        "precio": 12.99,
+        "descripcion": "Un elegante e inteligente reloj smart"
       },
       {
         "id": 2,
-        "nombre": "Pulsera de Cuero",
-        "imagen": "https://example.com/accesorios/pulsera-cuero.jpg",
+        "nombre": "Collar de perlas ",
+        "imagen": "https://acdn.mitiendanube.com/stores/854/397/products/ed862f50-e0e6-491a-b2b7-1b95c3236bad1-16fe4b70bd911c924116945505382517-640-0.jpeg",
+        "precio": 13.59,
+        "descripcion": "Un hermoso collar de perlas"
+      },
+      {
+        "id": 3,
+        "nombre": "Collar de perlas y cadena dorada",
+        "imagen": "https://acdn.mitiendanube.com/stores/001/713/274/products/image-037df69574242db76916293920182445-640-0.",
         "precio": 12.00,
-        "descripcion": "Una moderna pulsera de cuero"
+        "descripcion": "Un elegante collar de perlas y cadena dorada"
       }
     ]
   }
