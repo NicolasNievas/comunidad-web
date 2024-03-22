@@ -20,7 +20,7 @@ function Pantalones(){
 
     return (
         <div>
-            <h2>Pantalones</h2>
+            <h2>Pants</h2>
             <div className="pantalones-container">
                 {pantalones.map(pantalon => (
                     <div key={pantalon.id} className="pantalon-item">

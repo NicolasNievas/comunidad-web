@@ -11,6 +11,7 @@ import Accesorios from './pages/Indumentaria/Accesorios/Accesorios';
 import Remeras from './pages/Indumentaria/Remeras/Remeras';
 import Pantalones from './pages/Indumentaria/Pantalones/Pantalones';
 import Buzos from './pages/Indumentaria/Buzos/Buzos';
+import Add from './pages/Indumentaria/Add/Add';
 
 import './App.css';
 
@@ -29,6 +30,7 @@ function App() {
           <Route path='/pantalones' element={<Pantalones />} />
           <Route path='/buzos' element={<Buzos />} />
           <Route path='/accesorios' element={<Accesorios />} />
+          <Route path='/add' element={<Add />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
 

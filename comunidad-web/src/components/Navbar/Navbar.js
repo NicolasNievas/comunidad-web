@@ -16,6 +16,7 @@ const Navbar = () => {
             <li className='navbar-li'><NavLink className="navbar-li-text" to="/pantalones" aria-label="Pantalones">Pants</NavLink></li>
             <li className='navbar-li'><NavLink className="navbar-li-text" to="/buzos" aria-label="Buzos">Divers</NavLink></li>
             <li className='navbar-li'><NavLink className="navbar-li-text" to="/accesorios" aria-label="Accesorios">Accessories</NavLink></li>
+            <li className='navbar-li'><NavLink className="navbar-li-text" to="/add" aria-label="Add">Add</NavLink></li>
           </ul>
         </nav >
       </div>

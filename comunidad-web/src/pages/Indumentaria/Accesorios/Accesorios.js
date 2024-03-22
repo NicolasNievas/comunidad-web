@@ -21,7 +21,7 @@ function Accesorios(){
 
     return (
         <div>
-            <h2>Accesorios</h2>
+            <h2>Accesories</h2>
             <div className="accesorios-container">
                 {accesorios.map(accesorio => (
                     <div key={accesorio.id} className="accesorio-item">

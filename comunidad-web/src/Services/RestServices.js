@@ -22,4 +22,14 @@ async function GetAccesorios(){
   );
 }
 
-export { GetRemeras, GetBuzos, GetPantalones, GetAccesorios};
+async function AddIndumentaria(indumentaria){
+  return fetch("http://localhost:3001/add", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(indumentaria),
+  }).then((response) => response.json());
+}
+
+export { GetRemeras, GetBuzos, GetPantalones, GetAccesorios, AddIndumentaria};
