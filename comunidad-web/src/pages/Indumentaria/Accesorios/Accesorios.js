@@ -27,7 +27,6 @@ function Accesorios(){
                     <div key={accesorio.id} className="accesorio-item">
                         <img src={accesorio.imagen} alt={accesorio.nombre} />
                         <h3>{accesorio.nombre}</h3>
-                        <p>Precio: ${accesorio.precio}</p>
                         <p>{accesorio.descripcion}</p>
                     </div>
                 ))}

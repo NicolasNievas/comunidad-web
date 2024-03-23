@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { GetRemeras } from '../../../Services/RestServices';
+import Swal from 'sweetalert2';
 
 import './Remeras.css';
 
@@ -10,7 +11,15 @@ function Remeras() {
     const fetchRemeras = async () => {
       try {
         const remerasData = await GetRemeras();
-        setRemeras(remerasData);
+        if (remerasData.length === 0) {
+          Swal.fire({
+            icon: 'error',
+            title: 'No se encontraron remeras',
+            text: 'Lo sentimos, no hay remeras disponibles en este momento.',
+          });
+        } else {
+          setRemeras(remerasData);
+        }
       } catch (error) {
         console.error('Error fetching remeras:', error);
       }
@@ -27,7 +36,6 @@ function Remeras() {
           <div key={remera.id} className="remera-item">
             <img src={remera.imagen} alt={remera.nombre} />
             <h3>{remera.nombre}</h3>
-            <p>Precio: ${remera.precio}</p>
             <p>{remera.descripcion}</p>
           </div>
         ))}

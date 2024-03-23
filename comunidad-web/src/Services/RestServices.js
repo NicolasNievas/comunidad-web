@@ -22,8 +22,14 @@ async function GetAccesorios(){
   );
 }
 
-async function AddIndumentaria(indumentaria){
-  return fetch("http://localhost:3001/add", {
+async function GetIndumentarias(tipo) {
+  return fetch(`http://localhost:3001/${tipo}`).then((response) =>
+    response.json()
+  );
+}
+
+async function AddIndumentaria(tipo, indumentaria) {
+  return fetch(`http://localhost:3001/${tipo}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -32,4 +38,20 @@ async function AddIndumentaria(indumentaria){
   }).then((response) => response.json());
 }
 
-export { GetRemeras, GetBuzos, GetPantalones, GetAccesorios, AddIndumentaria};
+async function EditIndumentaria(tipo, id, indumentaria) {
+  return fetch(`http://localhost:3001/${tipo}/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(indumentaria),
+  }).then((response) => response.json());
+}
+
+async function DeleteIndumentaria(tipo, id) {
+  return fetch(`http://localhost:3001/${tipo}/${id}`, {
+    method: "DELETE",
+  });
+}
+
+export { GetRemeras, GetBuzos, GetPantalones, GetAccesorios, AddIndumentaria, EditIndumentaria, DeleteIndumentaria, GetIndumentarias};

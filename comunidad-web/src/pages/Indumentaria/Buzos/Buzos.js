@@ -26,7 +26,6 @@ function Buzos() {
           <div key={buzo.id} className="buzo-item">
             <img src={buzo.imagen} alt={buzo.nombre} />
             <h3>{buzo.nombre}</h3>
-            <p>Precio: ${buzo.precio}</p>
             <p>{buzo.descripcion}</p>
           </div>
         ))}

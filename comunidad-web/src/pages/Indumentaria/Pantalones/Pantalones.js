@@ -26,7 +26,6 @@ function Pantalones(){
                     <div key={pantalon.id} className="pantalon-item">
                         <img src={pantalon.imagen} alt={pantalon.nombre} />
                         <h3>{pantalon.nombre}</h3>
-                        <p>Precio: ${pantalon.precio}</p>
                         <p>{pantalon.descripcion}</p>
                     </div>
                 ))}
