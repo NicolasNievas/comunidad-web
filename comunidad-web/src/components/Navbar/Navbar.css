@@ -44,3 +44,35 @@
 .navbar-li-text:hover {
   color: rgba(255, 255, 255, 0.7);
 }
+
+.navbar-dropdown {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-ul {
+    display: none;
+  }
+
+  .navbar-dropdown {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #282c34;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+
+  .navbar-dropdown a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+  }
+
+  .navbar-dropdown a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}

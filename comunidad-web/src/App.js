@@ -14,6 +14,8 @@ import Buzos from './pages/Indumentaria/Buzos/Buzos';
 import Add from './pages/Indumentaria/Add/Add';
 
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
   return (
@@ -34,7 +36,7 @@ function App() {
           <Route path='*' element={<NotFound />} />
         </Routes>
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );

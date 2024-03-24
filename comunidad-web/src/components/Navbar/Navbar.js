@@ -18,9 +18,17 @@ const Navbar = () => {
             <li className='navbar-li'><NavLink className="navbar-li-text" to="/accesorios" aria-label="Accesorios">Accessories</NavLink></li>
             <li className='navbar-li'><NavLink className="navbar-li-text" to="/add" aria-label="Add">Add</NavLink></li>
           </ul>
+          <div className="navbar-dropdown">
+            <NavLink className="navbar-li-text" to="/" aria-label="Home">Home</NavLink>
+            <NavLink className="navbar-li-text" to="/about" aria-label="About">About Us</NavLink>
+            <NavLink className="navbar-li-text" to="/remeras" aria-label="Remeras">T-Shirts</NavLink>
+            <NavLink className="navbar-li-text" to="/pantalones" aria-label="Pantalones">Pants</NavLink>
+            <NavLink className="navbar-li-text" to="/buzos" aria-label="Buzos">Divers</NavLink>
+            <NavLink className="navbar-li-text" to="/accesorios" aria-label="Accesorios">Accessories</NavLink>
+            <NavLink className="navbar-li-text" to="/add" aria-label="Add">Add</NavLink>
+          </div>
         </nav >
       </div>
-
     </div>
   );
 }

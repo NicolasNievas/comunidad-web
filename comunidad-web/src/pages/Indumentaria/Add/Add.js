@@ -2,13 +2,15 @@ import React, { useState, useEffect  } from 'react';
 import { AddIndumentaria, GetIndumentarias, DeleteIndumentaria, EditIndumentaria } from '../../../Services/RestServices';
 import Swal from 'sweetalert2';
 
-import {ReactComponent as PostSvg} from '../../../svgs/post.svg';
-import {ReactComponent as DeleteSvg} from '../../../svgs/delete.svg';
-import {ReactComponent as PutSvg} from '../../../svgs/put.svg';
+import {ReactComponent as PostSvg} from '../../../assets/svgs/post.svg';
+import {ReactComponent as DeleteSvg} from '../../../assets/svgs/delete.svg';
+import {ReactComponent as PutSvg} from '../../../assets/svgs/put.svg';
+
 
 import './Add.css';
 
 function Add() {
+
   const [tipo, setTipo] = useState('remeras'); 
   const [id, setId] = useState("");
   const [nombre, setNombre] = useState('');
@@ -17,23 +19,6 @@ function Add() {
   const [indumentarias, setIndumentarias] = useState([]);
   const [modalTitle, setModalTitle] = useState("");
   const [ocultar, setOcultar] = useState(false);
-
- function IsEmpty() {
-  if (nombre !== "") {
-    return false
- } 
-   else if (imagen !== "") {
-   return false
-   }
-    else if (descripcion !== "") {
-    return false
-    }
-   return true
- }
-
-  useEffect(() => {
-    loadIndumentarias();
-  }, [tipo]);
 
   const loadIndumentarias = async () => {
     try {
@@ -45,34 +30,6 @@ function Add() {
         icon: 'error',
         title: 'Error',
         text: 'Hubo un error al cargar las indumentarias. Por favor, inténtalo de nuevo.',
-      });
-    }
-  };
-
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const indumentaria = {
-      nombre,
-      imagen,
-      descripcion,
-    };
-    try {
-      await AddIndumentaria(tipo, indumentaria);
-      Swal.fire({
-        icon: 'success',
-        title: 'Producto agregado',
-        text: 'El producto se ha agregado exitosamente',
-      });
-      setNombre('');
-      setImagen('');
-      setDescripcion('');
-    } catch (error) {
-      console.error('Error adding product:', error);
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Hubo un error al agregar el producto. Por favor, inténtalo de nuevo.',
       });
     }
   };
@@ -98,37 +55,89 @@ function Add() {
     }
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const indumentaria = { name: nombre, imageUrl: imagen, descripcion: descripcion };
+    const isValid = IsValid();
+    if (isValid) {
+      try {
+        await AddIndumentaria(tipo, indumentaria);
+        Swal.fire({
+          icon: 'success',
+          title: 'Indumentaria agregado',
+          text: 'La indumentaria se ha agregado exitosamente',
+          showConfirmButton: false,
+          timer: 2000
+        });
+        setNombre('');
+        setImagen('');
+        setDescripcion('');
+        CloseModal();
+        loadIndumentarias();
+      } catch (error) {
+        console.error('Error adding product:', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Hubo un error al registrar la indumentaria. Por favor, inténtalo de nuevo.',
+          confirmButtonText: 'Aceptar',
+          confirmButtonColor: '#f27474',
+        });
+      }
+    }
+  };
+
   const handlePutProduct = async (id) => {
-    const indumentaria = {
-      id,
-      nombre,
-      imagen,
-      descripcion,
-    };
-    try {
-      await EditIndumentaria(tipo, id, indumentaria); 
-      Swal.fire({
-        icon: 'success',
-        title: 'Producto actualizado',
-        text: 'El producto se ha actualizado exitosamente',
-      });
-      ClearProductInputs();
-      CloseModal();
-    } catch (error) {
-      console.error('Error updating product:', error);
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Hubo un error al actualizar el producto. Por favor, inténtalo de nuevo.',
-      });
+    const indumentaria = {id, nombre, imagen, descripcion,};
+    const isValid = IsValid();
+    if (isValid) {
+      try {
+        await EditIndumentaria(tipo, id, indumentaria); 
+        Swal.fire({
+          icon: 'success',
+          title: 'Producto actualizado',
+          text: 'El producto se ha actualizado exitosamente',
+        });
+        ClearProductInputs();
+        CloseModal();
+        
+      } catch (error) {
+        console.error('Error updating product:', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Hubo un error al actualizar el producto. Por favor, inténtalo de nuevo.',
+          confirmButtonText: 'Aceptar',
+          confirmButtonColor: '#f27474',
+        });
+      }
     }
   }
+
+ function IsEmpty() {
+  if (nombre !== "") {
+    return false
+ } 
+   else if (imagen !== "") {
+   return false
+   }
+    else if (descripcion !== "") {
+    return false
+    }
+   return true
+ }
+
+  useEffect(() => {
+    loadIndumentarias();
+  }, [tipo]);
+
   function CloseModal() {
     const closeButton = document.getElementById("btn-close-modal");
     if (closeButton) {
       closeButton.click();
     }
   }
+  
 
   function ClearProductInputs() {
     setNombre("");
@@ -178,7 +187,7 @@ function Add() {
     <div className='global-container'>
       <div className='title-btn-container'>
         <h1>Manage clothes</h1>
-        <div className="d-flex">
+        
           <select value={tipo} onChange={(e) => setTipo(e.target.value)} className="form-select me-3">
             <option value="remeras">T-Shirts</option>
             <option value="buzos">Divers</option>
@@ -189,8 +198,6 @@ function Add() {
           <button type="button" className="btn btn-success svg-btn" data-bs-toggle="modal" data-bs-target="#modal" onClick={() => { ClearProductInputs(); setModalTitle("Registrar Producto"); setTimeout(function () { document.getElementById('nombre').focus(); }, 500);  }}>
             <PostSvg className="svg" />
           </button>
-
-        </div>
       </div>
   
       <table className="table table-striped table-bordered table-hover table-custom" align="center">
@@ -387,7 +394,7 @@ function Add() {
                 }}
               >
                 <div>
-                  <p className="fw-semibold">X Cerrar</p>
+                  <p className="fw-semibold">Cerrar</p>
                 </div>
               </button>
               <button type="button" hidden className="btn-close-modal" id="btn-close-modal" data-bs-dismiss="modal"></button>

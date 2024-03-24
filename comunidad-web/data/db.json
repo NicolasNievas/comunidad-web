@@ -1,51 +1,57 @@
 {
   "remeras": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Essential Oversize T-shirt",
       "imageUrl": "https://d22fxaf9t8d39k.cloudfront.net/e7cf823544fa4734131f6fa37b9c19c7eb99a22aeca524ce5f49e5d6698338e67239.jpeg",
       "descripcion": "A nice overzie Essential baige t-shirt"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Overze Moon T-shirt",
       "imageUrl": "https://d22fxaf9t8d39k.cloudfront.net/e16839631a905a327103c7e6f353a281b27910353c07f533651a553c4018230d7239.jpg",
       "descripcion": "An elegant white t-shirt with a moon print"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Essential Oversize T-shirt",
       "imageUrl": "https://d22fxaf9t8d39k.cloudfront.net/dc2710c762623b9fa12436931522b21590cfb0e4ac0a17f2b569c1cce7cba24e7239.jpg",
       "descripcion": "A nice black Essential overzie t-shirt"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Oversize Black T-shirt",
       "imageUrl": "https://d22fxaf9t8d39k.cloudfront.net/db63c22ea5375d1a01fa6f8f3448ca4df110bcbb67c8330a84cedb6d4a99aedc7239.jpeg",
       "descripcion": "A nice plain black overzie t-shirt"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Happy oversize T-shirts",
       "imageUrl": "https://d22fxaf9t8d39k.cloudfront.net/2c4a1453fa1f0375c6c3579379bc41304433be39dfcf0b4bc53514afee7618137239.jpg",
       "descripcion": "A nice plain black overzie t-shirt"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "T-shirt over Cruel Love",
       "imageUrl": "https://d22fxaf9t8d39k.cloudfront.net/e4b02a1c1ec30bbb7523db67994a240028908011db0f95ed69c4318f8926d56e7239.jpg",
+      "descripcion": "A nice plain black overzie t-shirt"
+    },
+    {
+      "id": "7",
+      "name": "T-shirt over Cruel Love",
+      "imageUrl": "https://acdn.mitiendanube.com/stores/001/053/068/products/mujer-afro-11-da492bf8650e3e52e116645715620104-240-0.jpg",
       "descripcion": "A nice plain black overzie t-shirt"
     }
   ],
   "buzos": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Black parka",
       "imageUrl": "https://d22fxaf9t8d39k.cloudfront.net/c76e3936344ceed4587e955f7c449e395dec2c3b78cb7955c8f16224684381717239.jpg",
       "descripcion": "A comfortable and warm black parka"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Oversize green plain sweatshirt",
       "imageUrl": "https://d22fxaf9t8d39k.cloudfront.net/71435a0671add66f90341b28644a5f2916f9d91186eeb7ae7a6717e84cc508717239.jpg",
       "descripcion": "A modern plain green coverall"
@@ -59,31 +65,31 @@
   ],
   "pantalones": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Jogger MOM cargo",
       "imageUrl": "https://d22fxaf9t8d39k.cloudfront.net/bf9127ac6b95b5983843909b7458d7b07a17ecf71f96feb3cbcc51a5fb3efd8a7239.jpeg",
       "descripcion": "A fashionable blue trouser"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Jogger MOM black cargo",
       "imageUrl": "https://d22fxaf9t8d39k.cloudfront.net/486180c3c7ca2d0b0ec44fc30231eb43f62e2c77695b429a7c334807279b925e7239.jpg",
       "descripcion": "A classic black trouser"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Jogger MOM Snowy",
       "imageUrl": "https://d22fxaf9t8d39k.cloudfront.net/f8a835a1118d094d5cdf32667752e6c7ece7f12128cf3c9a045a4b9fcc5d6ca87239.jpg",
       "descripcion": "A classic black trouser"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Palm Angel oversize shorts",
       "imageUrl": "https://d22fxaf9t8d39k.cloudfront.net/2111d03e3125ee5217df2752c4c869aeecf0752420399c1709cfbecfe6a815f97239.jpg",
       "descripcion": "A classic black trouser"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Snowy MOM Cargo Bermuda shorts",
       "imageUrl": "https://d22fxaf9t8d39k.cloudfront.net/a3d0076470003eb1fd8b6106afc96fd41468c2ca97b3fc84ad0aee66c7d4071b7239.jpg",
       "descripcion": "A classic black trouser"
@@ -91,19 +97,19 @@
   ],
   "accesorios": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Smart Watch",
       "imageUrl": "https://acdn.mitiendanube.com/stores/001/131/056/products/m4211-6ae73fa73c1da2388816852126149047-640-0.webp",
       "descripcion": "An elegant and intelligent smart watch"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Pearl necklace",
       "imageUrl": "https://acdn.mitiendanube.com/stores/854/397/products/ed862f50-e0e6-491a-b2b7-1b95c3236bad1-16fe4b70bd911c924116945505382517-640-0.jpeg",
       "descripcion": "A beautiful pearl necklace"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Pearl necklace and golden chain",
       "imageUrl": "https://acdn.mitiendanube.com/stores/001/713/274/products/image-037df69574242db76916293920182445-640-0.",
       "descripcion": "An elegant necklace of pearls and gold-plated chain"

@@ -1,3 +1,11 @@
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+
+}
+
+
+
 .global-container {
   max-width: 800px;
   margin: 0 auto;
@@ -36,6 +44,7 @@
 .table-custom {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 50px;
 }
 
 .table-custom th,
@@ -61,8 +70,9 @@
   transform: scale(1.1);
 }
 
+/* Estilos para el modal */
 .modal {
-  display: none;
+  display: none; /* Por defecto, el modal estará oculto */
   position: fixed;
   z-index: 1;
   left: 0;
@@ -70,8 +80,7 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro semi-transparente */
 }
 
 .modal-content {
@@ -81,6 +90,7 @@
   border: 1px solid #888;
   width: 80%;
   border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
 .close {
@@ -146,4 +156,10 @@
   transform: translate(-3px, -2px);
   width: 20px;
   height: 20px;
+}
+
+@media (max-width: 500px) {
+  .table-custom {
+    display: block !important;
+  }
 }
