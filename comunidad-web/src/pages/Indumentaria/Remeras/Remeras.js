@@ -34,8 +34,8 @@ function Remeras() {
       <div className="remeras-container">
         {remeras.map(remera => (
           <div key={remera.id} className="remera-item">
-            <img src={remera.imagen} alt={remera.nombre} />
-            <h3>{remera.nombre}</h3>
+            <img src={remera.imageUrl} alt={remera.name} />
+            <h3>{remera.name}</h3>
             <p>{remera.descripcion}</p>
           </div>
         ))}

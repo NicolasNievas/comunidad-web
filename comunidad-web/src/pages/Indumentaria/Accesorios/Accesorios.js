@@ -25,8 +25,8 @@ function Accesorios(){
             <div className="accesorios-container">
                 {accesorios.map(accesorio => (
                     <div key={accesorio.id} className="accesorio-item">
-                        <img src={accesorio.imagen} alt={accesorio.nombre} />
-                        <h3>{accesorio.nombre}</h3>
+                        <img src={accesorio.imageUrl} alt={accesorio.name} />
+                        <h3>{accesorio.name}</h3>
                         <p>{accesorio.descripcion}</p>
                     </div>
                 ))}

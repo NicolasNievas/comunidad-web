@@ -24,8 +24,8 @@ function Pantalones(){
             <div className="pantalones-container">
                 {pantalones.map(pantalon => (
                     <div key={pantalon.id} className="pantalon-item">
-                        <img src={pantalon.imagen} alt={pantalon.nombre} />
-                        <h3>{pantalon.nombre}</h3>
+                        <img src={pantalon.imageUrl} alt={pantalon.name} />
+                        <h3>{pantalon.name}</h3>
                         <p>{pantalon.descripcion}</p>
                     </div>
                 ))}

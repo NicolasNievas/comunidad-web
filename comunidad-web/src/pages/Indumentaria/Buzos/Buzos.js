@@ -24,8 +24,8 @@ function Buzos() {
       <div className="buzos-container">
         {buzos.map(buzo => (
           <div key={buzo.id} className="buzo-item">
-            <img src={buzo.imagen} alt={buzo.nombre} />
-            <h3>{buzo.nombre}</h3>
+            <img src={buzo.imageUrl} alt={buzo.name} />
+            <h3>{buzo.name}</h3>
             <p>{buzo.descripcion}</p>
           </div>
         ))}
