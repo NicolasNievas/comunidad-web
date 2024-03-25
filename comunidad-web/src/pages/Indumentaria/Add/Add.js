@@ -201,13 +201,14 @@ function Add() {
       </div>
   
       <table className="table table-striped table-bordered table-hover table-custom" align="center">
+        <div className="table-container">
         <thead className="thead-dark">
           <tr className="table-header">
             <th className="table-title" scope="col">#</th>
-            <th className="table-title" scope="col">Nombre</th>
+            <th className="table-title" scope="col">Name</th>
             <th className="table-title" scope="col">Imagen</th>
-            <th className="table-title" scope="col">Descripción</th>
-            <th className="table-title" scope="col">Acciones</th>
+            <th className="table-title" scope="col">Description</th>
+            <th className="table-title" scope="col">Shares</th>
           </tr>
         </thead>
   
@@ -261,6 +262,7 @@ function Add() {
             </tr>
           </tbody>
         )}
+        </div>
       </table>
   
       {/* Modal con el formulario para registrar/actualizar un producto */}

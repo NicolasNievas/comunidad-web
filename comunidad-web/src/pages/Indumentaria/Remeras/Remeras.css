@@ -16,9 +16,21 @@
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 50px; 
+  backdrop-filter: blur(5px); 
+  background-color: rgba(255, 255, 255, 0.5); 
 }
 
 .remera-item img {
   width: 100%;
   border-radius: 10px;
+}
+
+.remera-item img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.remera-item img:hover {
+  transform: scale(1.08); 
 }

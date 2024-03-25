@@ -16,7 +16,7 @@ const Navbar = () => {
             <li className='navbar-li'><NavLink className="navbar-li-text" to="/pantalones" aria-label="Pantalones">Pants</NavLink></li>
             <li className='navbar-li'><NavLink className="navbar-li-text" to="/buzos" aria-label="Buzos">Divers</NavLink></li>
             <li className='navbar-li'><NavLink className="navbar-li-text" to="/accesorios" aria-label="Accesorios">Accessories</NavLink></li>
-            <li className='navbar-li'><NavLink className="navbar-li-text" to="/add" aria-label="Add">Add</NavLink></li>
+            <li className='navbar-li'><NavLink className="navbar-li-text" to="/add" aria-label="Add">Manage</NavLink></li>
           </ul>
           <div className="navbar-dropdown">
             <NavLink className="navbar-li-text" to="/" aria-label="Home">Home</NavLink>
@@ -25,7 +25,7 @@ const Navbar = () => {
             <NavLink className="navbar-li-text" to="/pantalones" aria-label="Pantalones">Pants</NavLink>
             <NavLink className="navbar-li-text" to="/buzos" aria-label="Buzos">Divers</NavLink>
             <NavLink className="navbar-li-text" to="/accesorios" aria-label="Accesorios">Accessories</NavLink>
-            <NavLink className="navbar-li-text" to="/add" aria-label="Add">Add</NavLink>
+            <NavLink className="navbar-li-text" to="/add" aria-label="Add">Manage</NavLink>
           </div>
         </nav >
       </div>
