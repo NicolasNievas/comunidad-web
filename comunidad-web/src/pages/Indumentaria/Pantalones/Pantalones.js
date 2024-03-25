@@ -20,7 +20,9 @@ function Pantalones(){
 
     return (
         <div>
+            <div className="pants-name">
             <h2>Pants</h2>
+            </div>
             <div className="pantalones-container">
                 {pantalones.map(pantalon => (
                     <div key={pantalon.id} className="pantalon-item">

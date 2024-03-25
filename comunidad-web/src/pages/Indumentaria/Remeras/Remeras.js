@@ -30,7 +30,9 @@ function Remeras() {
 
   return (
     <div>
+      <div className="remera-name">
       <h2>T-Shirts</h2>
+      </div>
       <div className="remeras-container">
         {remeras.map(remera => (
           <div key={remera.id} className="remera-item">

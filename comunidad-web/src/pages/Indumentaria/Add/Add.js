@@ -25,11 +25,11 @@ function Add() {
       const data = await GetIndumentarias(tipo);
       setIndumentarias(data);
     } catch (error) {
-      console.error('Error fetching indumentarias:', error);
+      console.error('Error fetching products:', error);
       Swal.fire({
         icon: 'error',
         title: 'Error',
-        text: 'Hubo un error al cargar las indumentarias. Por favor, inténtalo de nuevo.',
+        text: 'There was an error loading the products. Please try again.',
       });
     }
   };
@@ -39,18 +39,18 @@ function Add() {
       await DeleteIndumentaria(tipo, id);
       Swal.fire({
         icon: 'success',
-        title: 'Indumentaria eliminada',
-        text: 'La indumentaria se ha eliminado exitosamente',
+        title: 'eliminated product',
+        text: 'Product has been successfully removed',
         showConfirmButton: false,
         timer: 2000
       });
       loadIndumentarias();
     } catch (error) {
-      console.error('Error deleting indumentaria:', error);
+      console.error('Error deleting product:', error);
       Swal.fire({
         icon: 'error',
         title: 'Error',
-        text: 'Hubo un error al eliminar la indumentaria. Por favor, inténtalo de nuevo.',
+        text: 'There was an error deleting the product. Please try again.',
       });
     }
   };
@@ -64,8 +64,8 @@ function Add() {
         await AddIndumentaria(tipo, indumentaria);
         Swal.fire({
           icon: 'success',
-          title: 'Indumentaria agregado',
-          text: 'La indumentaria se ha agregado exitosamente',
+          title: 'Product added',
+          text: 'Product has been added successfully',
           showConfirmButton: false,
           timer: 2000
         });
@@ -79,40 +79,43 @@ function Add() {
         Swal.fire({
           icon: 'error',
           title: 'Error',
-          text: 'Hubo un error al registrar la indumentaria. Por favor, inténtalo de nuevo.',
-          confirmButtonText: 'Aceptar',
+          text: 'There was an error registering the product. Please try again.',
+          confirmButtonText: 'Accept',
           confirmButtonColor: '#f27474',
         });
       }
     }
   };
 
-  const handlePutProduct = async (id) => {
-    const indumentaria = {id, nombre, imagen, descripcion,};
+  const handlePutProduct = async (e) => {
+    e.preventDefault();
+    const indumentaria = { name: nombre, imageUrl: imagen, descripcion: descripcion };
     const isValid = IsValid();
     if (isValid) {
       try {
         await EditIndumentaria(tipo, id, indumentaria); 
         Swal.fire({
           icon: 'success',
-          title: 'Producto actualizado',
-          text: 'El producto se ha actualizado exitosamente',
+          title: 'Updated product',
+          text: 'The product has been successfully upgraded',
+          showConfirmButton: false,
+          timer: 2000
         });
-        ClearProductInputs();
         CloseModal();
-        
+        loadIndumentarias(); 
       } catch (error) {
         console.error('Error updating product:', error);
         Swal.fire({
           icon: 'error',
           title: 'Error',
-          text: 'Hubo un error al actualizar el producto. Por favor, inténtalo de nuevo.',
-          confirmButtonText: 'Aceptar',
+          text: 'There was an error updating the product. Please try again.',
+          confirmButtonText: 'Accept',
           confirmButtonColor: '#f27474',
         });
       }
     }
   }
+  
 
  function IsEmpty() {
   if (nombre !== "") {
@@ -155,9 +158,9 @@ function Add() {
     if (nombre === "") {
       Swal.fire({
         icon: 'error',
-        title: 'El nombre no puede estar vacío',
-        text: 'Complete el campo',
-        confirmButtonText: 'Aceptar',
+        title: 'The name cannot be empty',
+        text: 'Complete the field',
+        confirmButtonText: 'Accept',
         confirmButtonColor: '#f27474',
       }).then(function () {
         setTimeout(function () {
@@ -169,9 +172,9 @@ function Add() {
      else if (imagen === "") {
       Swal.fire({
         icon: 'error',
-        title: 'La URL de la imagen no puede estar vacía',
-        text: 'Complete el campo',
-        confirmButtonText: 'Aceptar',
+        title: 'The URL of the image cannot be empty',
+        text: 'Complete the field',
+        confirmButtonText: 'Accept',
         confirmButtonColor: '#f27474',
       }).then(function () {
         setTimeout(function () {
@@ -229,18 +232,18 @@ function Add() {
                     type="button"
                     className="btn btn-danger svg-btn"
                     onClick={() => Swal.fire({
-                      title: '¿Está seguro de que desea eliminar la siguiente producto: ' + (product.name) + '?',
+                      title: 'Are you sure you want to remove the following product: ' + (product.name) + '?',
                       imageUrl: `${product.imageUrl}`,
                       imageWidth: 200,
                       imageHeight: 200,
                       imageAlt: 'Producto a eliminar',
-                      text: "Una vez eliminado, no se podrá recuperar",
+                      text: "Once deleted, it cannot be recovered",
                       icon: 'warning',
                       showCancelButton: true,
                       confirmButtonColor: '#dc3545', 
                       cancelButtonColor: '#6c757d',
-                      confirmButtonText: 'Aceptar',
-                      cancelButtonText: 'Cancelar',
+                      confirmButtonText: 'Accept',
+                      cancelButtonText: 'Cancel',
                       focusCancel: true
                     }).then((result) => {
                       if (result.isConfirmed) {
@@ -258,7 +261,7 @@ function Add() {
         ) : (
           <tbody>
             <tr>
-              <td className="table-name" colSpan={5}>Sin registros</td>
+              <td className="table-name" colSpan={5}>No records</td>
             </tr>
           </tbody>
         )}
@@ -287,7 +290,7 @@ function Add() {
                       }}
                     />
   
-                    <label className="label">Nombre:</label>
+                    <label className="label">Name:</label>
                     <div className="form-group-input">
                       <input
                         type="text"
@@ -302,7 +305,7 @@ function Add() {
                   </div>
   
                   <div className="form-group">
-                    <label id="urlImagenLabel" className="label">URL Imagen:</label>
+                    <label id="urlImagenLabel" className="label">URL Image:</label>
                     <div id="urlImagen">
                       <input
                         type="text"
@@ -316,7 +319,7 @@ function Add() {
                     </div>
                   </div>
                   <div className="form-group">
-                    <label className="label">Descripción:</label>
+                    <label className="label">Descriptión:</label>
                     <div className="form-group-input">
                       <textarea
                         className="form-control mb-3"
@@ -333,7 +336,7 @@ function Add() {
                       <div id="div-btn-save">
                         <button className="btn btn-success" id="btn-save" onClick={handleSubmit}>
                           <div>
-                            <p className="fw-semibold">Guardar</p>
+                            <p className="fw-semibold">Save</p>
                           </div>
                         </button>
                       </div>
@@ -342,7 +345,7 @@ function Add() {
                         <button className="btn btn-warning" id="btn-update" onClick={handlePutProduct}>
                           <div>
   
-                            <p className="fw-semibold text-white">Actualizar</p>
+                            <p className="fw-semibold text-white">Update</p>
                           </div>
                         </button>
                       </div>
@@ -362,11 +365,11 @@ function Add() {
                     } else {
                       Swal.fire({
                         icon: 'warning',
-                        title: '¿Está seguro de que desea cerrar el formulario?',
-                        text: "Se perderán todos los datos cargados",
-                        confirmButtonText: 'Aceptar',
+                        title: 'Are you sure you want to close the form?',
+                        text: "All uploaded data will be lost",
+                        confirmButtonText: 'Accept',
                         showCancelButton: true,
-                        cancelButtonText: 'Cancelar',
+                        cancelButtonText: 'Cancel',
                         confirmButtonColor: '#f8bb86',
                         cancelButtonColor: '#6c757d',
                       }).then((result) => {
@@ -379,11 +382,11 @@ function Add() {
                   } else if (modalTitle === 'Actualizar Producto') {
                     Swal.fire({
                       icon: 'warning',
-                      title: '¿Está seguro de que desea cerrar el formulario?',
-                      text: "Se perderán todos los datos modificados",
-                      confirmButtonText: 'Aceptar',
+                      title: 'Are you sure you want to close the form?',
+                      text: "All modified data will be lost",
+                      confirmButtonText: 'Accept',
                       showCancelButton: true,
-                      cancelButtonText: 'Cancelar',
+                      cancelButtonText: 'Cancel',
                       confirmButtonColor: '#f8bb86',
                       cancelButtonColor: '#6c757d',
                     }).then((result) => {
@@ -396,7 +399,7 @@ function Add() {
                 }}
               >
                 <div>
-                  <p className="fw-semibold">Cerrar</p>
+                  <p className="fw-semibold">Close</p>
                 </div>
               </button>
               <button type="button" hidden className="btn-close-modal" id="btn-close-modal" data-bs-dismiss="modal"></button>

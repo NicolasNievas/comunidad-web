@@ -20,7 +20,9 @@ function Buzos() {
 
   return (
     <div>
+      <div className="buzos-name">
       <h2>Divers</h2>
+      </div>
       <div className="buzos-container">
         {buzos.map(buzo => (
           <div key={buzo.id} className="buzo-item">
